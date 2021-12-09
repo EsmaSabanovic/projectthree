@@ -1,0 +1,244 @@
+/*
+Name: Esma Šabanović
+Course: CS412 [1]
+Assignment: Project #2
+Due Date: 05/11/2021
+*/
+
+/*modification for the whole body part*/
+body {
+font-family:Georgia, 'Times New Roman', Times, serif;
+   font-weight:normal;
+   color:black;
+   text-indent: 0;
+ }
+
+/*adding margins on certain section of the body part
+  applies from #Biography part until the end of form*/
+ div.bodi{
+  margin: 2.5cm;
+ }
+
+ /*this section is separated in order to apply background image only at the top*/
+  .upperpart{
+    background-image: url('ombre.png');
+    background-repeat: no-repeat;
+    height:100%;  
+    background-blend-mode: color; 
+    background-size: 100% 100%;  
+    padding:0;
+    margin:0;
+    background-position: top;
+  }
+  
+  /*editing the heading that is at the top of my page*/
+  h1{
+    color:rgb(44, 77, 116); 
+    font-family:Georgia, 'Times New Roman', Times, serif;
+     text-align: left;
+     margin-left: 2.5cm;
+     margin-top: 0cm;
+    /* background-color:rgb(222, 233, 248);*/
+   }
+ 
+  /*this container had two containers next to each other*/
+  .fluid-container{
+    display: flex;
+    text-indent: 0%;
+}  
+
+/*editing the part where my personal photo is found*/
+div.photo{
+    height: 400px;
+    width: 370px;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+  }
+  
+  /*first part of fluid-container, found on left side*/
+  .c1{
+    width: fit-content;
+    float: left;
+    text-align: justify ;
+    align-items: center
+    ;
+}
+
+/*editing my photo, not its container*/
+.myphoto
+{border-radius: 70%;
+image-rendering: auto;
+align-content: center;
+height: 250px;
+}
+
+/*part of fluid-container, shortcut to some page points*/
+div.shortcut{
+  height: fit-content;
+  width: fit-content;
+  background-color:white;
+text-align: left;}
+
+/*
+div.med
+{align-content: center;}*/
+
+/*container where "Skills and Experience" and "Languages" are placed*/
+  .cont{
+    display: flex;
+    height: fit-content;    
+}
+
+/*applies on "Address" part, location, "Media", and forms part*/
+.container{
+  display: flex;
+}
+
+/*adding vertical line for better design*/
+.vl{
+  border-left: 2px solid rgb(44, 77, 116); 
+  height: auto;
+  left: 20%50%;
+  margin-left: 3px;
+  top: 6px;
+  bottom: 6px;
+}
+
+/*part that includes another type of shortcut until until the end of my page*/
+.lowestpart{
+  background-image: url('ombre_background.png');
+  background-repeat: no-repeat;
+  background-attachment:scroll;
+  height:100%;
+  padding:0;
+  margin:0;
+  background-size: 100% 100%;     
+    background-blend-mode: color;  
+}
+
+/*editing forms*/
+.for{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*editing table*/
+table{
+text-align:justify;
+}
+
+/*editing first row of my table*/
+th{
+  text-align: center;
+}
+
+/*editing another type of shortcut that is found on the bottom*/
+.bar{
+  /*background-color:rgb(222, 233, 248);*/
+text-align:center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: larger;
+}
+
+/*editing hypertext anchor*/
+a:link{
+  background-color: transparent;
+  color: rgb(125, 107, 228);
+  text-decoration: none;
+}
+
+a:visited
+{color: rgb(125, 107, 228);
+text-decoration: underline;}
+
+a:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
+a:active{
+  color: blue;
+} 
+
+.tab-panel{
+  display:none;
+}
+.tab-panel.active{
+  display:block;
+}
+
+#removeB {
+  border: none;
+  background-color: rgb(111, 160, 224); 
+  color: white; 
+  cursor: pointer; 
+  padding: 10px;
+  font-size: 12px; 
+
+}
+#showB {
+  border: none;
+  background-color: rgba(111, 160, 224, 0.575); 
+  color: white; 
+  cursor: pointer; 
+  padding: 10px;
+  font-size: 12px; 
+}
+#dugme {
+  position: fixed; 
+  bottom: 20px; 
+  left:50%;
+  z-index: 99; 
+  border: none;
+  background-color: rgba(111, 160, 224, 0.575); 
+  color: white; 
+  cursor: pointer; 
+  padding: 10px;
+  font-size: 20px; 
+  
+}
+#dugme:hover {
+  background-color: rgb(255, 255, 255); 
+  color: black;
+
+}
+/*when having a window that is smaller than 992px, or when using mobile phone, the following instructions are applied 
+to maintain the page to look acceptable and readable.
+I included only containers that have coused a problem*/
+  @media only screen and (max-width:992px){
+    .container{
+      flex-direction: column;
+      justify-content: center; 
+      height: auto;
+      width: auto; 
+         }
+    .fluid-container{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+    }
+    .c1{
+      align-self: center;
+      width: auto;
+    }
+    .c2{
+align-self: flex-end;
+    }
+
+    table{
+      display: flex;
+    }
+    .cont
+    {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      width: auto;}
+    
+  }

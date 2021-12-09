@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--Bootstrap CSS-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--
+        Name: Esma Šabanović
+        Course: CS412 [1]
+        Assignment: Project #3
+        Due Date: 05/11/2021
+        Purpose: Implementation of CV using HTML and CSS; 
+        Implementation through the use of links, tables, images from the same/ different file, lists (both ordered and unordered), attributes (src,alt,title etc.), standalone tags, tags for hyperlinks, creating sections etc. in HTML.
+        Implementation of different styles by using CSS. 
+    -->
+    <!--My CSS file-->
+   <title>Resume- Esma Šabanović</title>
+   <link rel="Stylesheet" href="Styles.css">
+   <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="jquery-3.6.0.js" ></script>
+    <script src="jquery.js"></script>
+   <script src="jquery-ui.min.js"></script>
+
+</head>
+<body>
+ <div class="upperpart"> 
+    <br> <h1>Resume </h1>
+    <h5><div style="margin-left: 2.5cm;">
+    <p  id="objectTest" ></p>
+    </div> </h5>
+    <br>
+    <div class="mydate" style="text-align: center; font-size: 25px; color: rgb(44, 77, 116);">
+        <span id="mydatetime"></span>
+    </div>
+   </div>
+<div class="bodi">
+    
+    <div id="eventTest"></div>
+   <div class="fluid-container">
+    <div class="c1">
+        <!--<a name="Biography"><h3>Biography</h3></a>-->
+        <div class="shortcut">
+            <p>
+                        <!--Icons are visible at the top of my page and connected to different parts of my CV. When chosen, they lead to certain point. -->
+                        <a href="#Biography"><img src="bio2.png" alt="bio2" title="Biography"></a>
+                        <a href="#Education"><img src="edd.png" alt="edd" title="Education"></a>
+                       <a href="#Skills and Experience"><img src="experience_icon.png" alt="experience_icon" title="Skills and Experience"></a> 
+                       <a href="#Languages"><img src="languages_icon.png" alt="languages_icon" title="Languages"></a>
+                       <a href="#Contact"><img src="mailphone.png" alt="mailphone" title="Contact"></a> 
+                       <a href="#Address"><img src="adrr.jpg" alt="adrr" title="Address"></a> 
+                        <a href="#Media"><img src="social_media.png" alt="social_media" title="Social Media"></a> 
+                    </p>  
+                    
+                </div>
+                <br>
+    <p class="Bio">
+        <a name="Biography"><h2>Esma Šabanović </h2> <br></a>
+        My name is Esma Šabanović. I am 21-year-old student born in Sarajevo, but raised in Breza, Bosnia and Herzegovina. I finished elementary school in my hometown and continued my education in the capital of Bosnia and Herzegovina. <br>I am third year student at <a href="https://www.ius.edu.ba/">
+        <abbr title="International University Sarajevo"><i>IUS </i></abbr></a>. 
+         <br>Due to various practical work, I have experienced: 
+         <ul id="mypart"></ul>
+        My major is <i>Computer Science and Engineering</i>, but I have always been interested in Psychology, Art&Design, and achieved <br> excellent results at <a href="https://www.cambridgeinternational.org/"> <i>
+             Cambridge Assessment International Education
+         </i> </a>.
+         <br>
+        I love to travel, learn about new cultures and their traditions. </p> <br>
+    
+    </div>
+   
+    
+    <div class="c2" style="clear: left;">
+    
+    <div class="photo" id="photo">
+        <figure> <img src="slika.jpg"  alt="Personal Image for CV" title="Personal Photo" class="myphoto" style="align-items: center;">
+            <!--<figcaption>Photo 2020</figcaption>  --> 
+          </figure> <br>
+          <figure> <img src="esmasign.png"  alt="Signature" title="Signature" class="mysignature">
+            <!--<figcaption>Photo 2020</figcaption>  --> 
+          </figure> 
+         </div>
+    <div id="test"></div>
+    <button id="removeB" style="width:100%">REMOVE</button> <br>
+    <button id="showB" style="width: 100%;">SHOW</button> <br>
+    
+    </div>
+    </div>
+    
+        <!--Inserting horizontal line right after almost each paragraph; for visual effect, readability and helped me to be more organized-->
+    
+       <!--Education part; information about my education placed in one table for better organization-->
+    <div id="tabs">
+    <ul class="tab-list" >
+    <li>
+       <a class="tab-control" href="#tab1">Education</a>
+    </li>
+    <li>
+        <a class="tab-control" href="#tab2">Languages</a>
+     </li>
+     <li>
+        <a class="tab-control" href="#tab3">Skills and Experience</a>
+     </li>
+     <li>
+        <a class="tab-control" href="#tab4">Contact</a>
+     </li>
+     <li>
+        <a class="tab-control" href="#tab5">Address</a>
+     </li>
+    </ul>
+    
+    <div class="tab-panel active" id="tab1">
+     <a name="Education"><h3>Education</h3></a>
+            <!--<table border="1" width="1000" align="center" cellspacing="0" cellpadding="0" >
+            -->
+            <div class="table-responsive">
+            <table class="table table-success table-striped" >
+            <tr> 
+                <!--Titles will be bolded because of the default option; table contains 4 columns respectively:-->
+                <th> Year</th>
+                <th>Institution</th>
+                <th>Education Level</th>
+                <th> Program </th>
+                </tr> 
+            <tr>
+                <td>Sept 2006 - June 2015</td> <td>OŠ Enver Čolaković</td> <td>Elementary School</td> <td> Nine years of basic education </td> <!--first row-->
+            </tr>    
+            <tr>
+                <td>Sept 2015 - June 2019</td> <td>The First Bosniak High School</td> <td>High School</td> <td> Language program </td> <!--second row-->
+            </tr>
+            <tr>
+                <td>Sept 2015 - June 2017</td> <td>Cambridge Assesment International Education</td> <td> Cambridge Upper Secondary</td> <td> Cambridge IGCSE</td> 
+            </tr> 
+            <tr>
+                <td>Sept 2017 - June 2019</td>  <td>Cambridge Assessment International Education</td> <td>Cambridge Advanced</td> <td>Cambridge International AS & A Level</td>
+            </tr>
+            <tr>
+                <td>Sept 2019- now</td>  <td>International University of Sarajevo</td> <td> University </td> <td> Computer Sciences and Engineering (Bachelor) </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+      
+    
+    <div class="tab-panel" id="tab2"> 
+    <div class="col-md-4" style="margin: left 450px;" >
+              <a name="Languages"><h3>Languages</h3></a>
+        <ol> <!--Creating ordered list; default version (numbered)-->
+            <br>
+            <li>Bosnian<br> &#9733; &#9733; &#9733; &#9733; &#9733; </li>
+            <br>
+            <li>English<br> &#9733; &#9733; &#9733; &#9733; &#9733;</li>
+            <br>
+            <li>German<br> &#9733; &#9733; &#9733; &#9733; &#9734;</li>
+            <br>
+            <li>Turkish<br>&#9733; &#9733;  &#9734; &#9734; &#9734;</li>
+            <br>
+        </ol>  
+          </div>
+    </div>
+       
+     
+        
+    
+    <div class="tab-panel" id="tab3">
+     <div class="col-md-8"> 
+          <a name="Skills and Experience"><h3>Skills and Experience</h3></a>
+       <div class="vl">
+            <ul type="square">
+            <li>Translator at Sarajevo Business Forum 2019</li>
+            <li> Programming languages
+               <ul id="PL">
+                  <!--  
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>R</li>
+                    <li>Julia</li>
+                    <li>MATLAB</li>
+                    <li>HTML</li>
+                    <li>Python</li>-->
+                </ul> 
+            </li>    
+            <li>Teamwork</li>
+            <li>Writing and Researching</li>
+            <ul type="square">
+                <li>Šabanović, E. (2019), <i> Can we justify the use of animals in medical research?</i></li>
+            </ul>
+            <li>Volunteering
+                <ul type="square">
+                    <li><i><a href="https://www.sarajevobusinessforum.com/en">Sarajevo Business Forum</a></i></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+          </div>
+    </div>
+    
+    <div class="tab-panel" id="tab4">
+    <a name="Contact"><h3>Contact Me </h3></a> 
+        <address>
+            <p>
+              <strong>Business Email: </strong><br><a href="mailto:esabanovic@student.ius.edu.ba">esabanovic@student.ius.edu.ba</a><br>
+                <strong>Private Email: </strong><br><a href="mailto:es_my@hotmail.com">es_my@hotmail.com</a> <br>
+                <a href="mailto:esmasabanovic00@gmail.com"> esmasabanovic00@gmail.com.</a> <br>
+                <strong>Deactivated Email:</strong> <s>esma.sabanovic@bosnjackagim.edu.ba</s> <br>
+                <strong>Phone No: </strong> <br> +387 63 876 543
+            </p>
+        </address>
+    </div>
+    
+        <div class="tab-panel" id="tab5">
+    
+       
+       <!-- <div class="col-md-2"> </div>-->
+        <div class="col-md-3"> 
+         <a name="Address"><h3>Address </h3></a> 
+             <address> 
+                 <p>Alije Izetbegovića <br> 71370 Breza <br>
+                     Bosnia and Herzegovina</p>
+             </address>
+         </div>
+         <div class="col-md-9" style="margin: left 450px;">
+             <iframe
+           width="1100"
+           height="350"
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11476.281373401667!2d18.25401655874797!3d44.01994086770684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475f2c44c75cec67%3A0xadd076ce9b124fdb!2sBreza!5e0!3m2!1sbs!2sba!4v1635188509972!5m2!1sbs!2sba" ></iframe>
+         </div>
+     </div>
+    </div>
+    <div> 
+        <button onclick="topFunction()" id="dugme" title="Vrati na početak" style="background-color: rgb(111, 160, 224); ">Početak</button>
+        </div>
+        
+ </div>
+
+ <hr>
+<!--Social Media; icons connected to my links-->
+    <div class="container">
+        <div class="col-md-3">
+        <a name="Media"><h3>Find Me on Social Media</h3></a>
+ <p>    
+            <a href="https://www.facebook.com/esma.sabanovic"><img src="facebook-icon.png" alt="Facebook" title="Facebook" caption="Instagram"></a>
+            <a href="https://github.com/EsmaSabanovic"><img src="github.png" alt="GitHub" title="GitHub"></a>
+            <a href="https://www.instagram.com/esma.sabanovic/?hl=hr"><img src="instalogo.png" alt="Instagram" title="Instagram"></a>
+            
+        </p></div>
+        <div class="col-md-10">
+            <div class="for" style="margin: 2,5cm; padding-left: 2cm;">
+                <form>
+                    <div class="row mb-2">
+                      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control" id="inputEmail3" >
+                    
+                    </div>
+                    </div>
+                    <div class="row mb-2">
+                      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                      <div class="col-sm-9">
+                        <input type="password" class="form-control" id="inputPassword3">
+                      </div>
+                    </div>
+        
+                     
+                      <div class="col-md-11" >
+                        <button type="submit" class="btn btn-primary mb-3" style="float: right;">Submit</button>
+                      </div></form>   
+<form name="secondform" action="#">
+ <div class="col-md-11">
+                        <input type="text" id="comment" style="width: 100%;" onblur="checkisValid()"><br>
+                        
+                         <input type="checkbox" id="yes" name="odabir" value="yes"  class="radio" onclick="checkBoxSelectable(this)">
+                         <label for="approve">Public comment/question</label><br>
+                         <input type="checkbox" id="no" name="odabir" value="no" class="radio" onclick="checkBoxSelectable(this)">
+                         <label for="disagree">Private comment/question</label><br>
+                         <div id="checkBoxcheck" style="color: red;"></div> 
+                         <div id="cb"></div>
+                        <div id="correction" style="color: red;"></div> 
+                        <label for="formQuestionsInput" class="form-label" style="background-color: lightskyblue;">Please write your question or comment in the box above.</label>
+                       <div id="feedback" style="color: red; "></div> 
+                        <button type="submit" class="btn btn-primary mb-3" style="float: right;" onclick="checkonSubmit()">Submit</button>
+                        
+</div>
+</form>
+        
+                </div>
+    </div>
+
+
+</div>
+<div id="thxmess"></div>
+<div id="messtest"> </div>
+    
+<!--
+       <div class="bar">
+           <p> 
+     In case my CV gets longer, the visitor has option to chose where to be directed on my page while being at the bottom of the page
+           <a href="#Biography">Bio </a> 
+           
+               <a href="#Education">Education </a> 
+         
+       
+               <a href="#Languages">Languages </a> 
+        
+            
+                <a href="#Skills and Experience">Skills and Experience </a> 
+          
+         
+                 <a href="#Address">Address</a>
+           
+        </p>
+       </div> -->
+
+<!--
+<p style="margin: 2.5cm;">
+     Copyright, 2021 &copy; special char added at the bottom of the page for specal char demonstration 
+ </p> 
+<br>-->   
+<script>
+    $(function(){
+        $('#tabs').tabs();});</script>
+<script src="tabs.js"></script>
+
+ <script src="myjava.js"></script>
+
+<scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></scrip>
+
+</body>
+</html>
